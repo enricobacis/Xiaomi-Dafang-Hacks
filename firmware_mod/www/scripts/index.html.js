@@ -159,6 +159,8 @@ $(document).ready(function () {
 
     // Make liveview self refresh
     $("#liveview").attr("onload", "scheduleRefreshLiveImage(1000);");
+    // Trigger the first refresh since onload does not fire when the image is cached
+    refreshLiveImage();
 
 });
 
